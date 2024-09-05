@@ -16,7 +16,7 @@ function longest(s1, s2) {
     let arr=[]
     let arr2 =(s1+s2).split('')
     for(i of (arr2) ){
-        if (arr.includes(i) == false){
+        if (arr.includes(i) === false){
             arr.push(i)
         }
     }
