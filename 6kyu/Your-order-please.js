@@ -14,8 +14,8 @@ function order(words){
     const indexWords=[]
     const newWorld=[]
      words.forEach((n)=>{indexWords.push(...n.split('').filter(i=>i*2)) })
-    indexWords.forEach(n=>newWorld[n]=words.shift())
-    return newWorld.slice(1).join(' ')
+    indexWords.forEach(n=>newWorld[n-1]=words.shift())
+    return newWorld.join(' ')
 }
 
 console.log(order("is2 Thi1s T4est 3a"))
