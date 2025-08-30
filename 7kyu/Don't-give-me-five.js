@@ -21,9 +21,7 @@ const arr=[]
     for (let i =start; i<=end;i++){
     arr.push(i)
     }
-    return arr.filter(n=>{
-        return !String(n).includes('5')
-    }).length
+    return arr.filter(n=>!String(n).includes('5')    ).length
 
 }
 
