@@ -21,17 +21,15 @@
 
 
 function inArray(array1,array2){
-    let newArr=new Set (array1.reduce((acc,el)=>{
+    let newArr=array1.reduce((acc,el)=>{
         array2.forEach(n=>{ if (n.includes(el)){
             acc= [...acc,el]
         }
         })
-           return acc
+           return new Set(acc)
 
-    },[]))
-    newArr =[ ...newArr].sort()
-
-    return newArr
+    },[])
+    return [...newArr].sort()
 }
 
 
