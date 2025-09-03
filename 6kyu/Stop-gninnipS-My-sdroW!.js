@@ -10,7 +10,6 @@ function spinWords(string){
     return string.split(' ').map(n=>n.length<5? n : n.split('').reverse().join('') ).join(' ')
 }
 
-
 console.log(spinWords("Hey fellow warriors" ))
 console.log(spinWords("This is a test " ))
 console.log(spinWords("This is another test" ))
