@@ -32,7 +32,9 @@
 
 function findEvenIndex(arr) {
     for (let i = 0; i < arr.length; i++) {
-        if (arr.slice(0, i).reduce((acc, el) => acc + el, 0) === arr.slice(i + 1, arr.length).reduce((acc, el) => acc + el, 0)) {
+        const LeftArr = arr.slice(0, i).reduce((acc, el) => acc + el, 0)
+        const RightArr = arr.slice(i + 1, arr.length).reduce((acc, el) => acc + el, 0)
+        if (LeftArr === RightArr) {
             return i
         }
     }
