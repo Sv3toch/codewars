@@ -11,14 +11,25 @@
 
 
 
+// function wave(str){
+//    const result=[]
+//     for (let i =0;i<str.length; i++){
+//         if(str[i]!==' '){
+//         result.push(str.slice(0,i)+str[i].toUpperCase()+str.slice(i+1, str.length))
+//     }}
+//     return result
+// }
+
+
+
 function wave(str){
-   const result=[]
-    for (let i =0;i<str.length; i++){
-        if(str[i]!==' '){
-        result.push(str.slice(0,i)+str[i].toUpperCase()+str.slice(i+1, str.length))
-    }}
-    return result
-}
+return [...str].reduce((acc,el,i)=>{
+    if (el!==' '){
+        return [...acc,(str.slice(0,i)+str[i].toUpperCase()+str.slice(i+1, str.length))]
+    }return acc
+},[])}
+
+
 
 
 console.log(wave("hello"))
