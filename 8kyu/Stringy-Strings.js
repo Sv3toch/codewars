@@ -11,8 +11,9 @@
 //     The size will always be positive and will only use whole numbers.
 
 function stringy(size) {
-    const arr= new Array(size).fill()
-    return arr.map((el, index)=>index%2===0?'1':'0').join('')
+    // const arr= new Array(size).fill()
+    // return arr.map((el, index)=>index%2===0?'1':'0').join('')
+    return ''.padStart(size,'10')
 }
 
 
