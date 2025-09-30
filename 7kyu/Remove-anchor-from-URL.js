@@ -7,5 +7,11 @@
 
 
 function removeUrlAnchor(url){
-   return
+    const index=url.indexOf('#')
+    return index!==(-1)?url.slice(0,index):url
 }
+
+
+console.log(removeUrlAnchor('www.codewars.com#about'))
+console.log(removeUrlAnchor('www.codewars.com/katas/'))
+console.log(removeUrlAnchor('www.codewars.com/katas/?page=1#about'))
