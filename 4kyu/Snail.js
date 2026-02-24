@@ -22,31 +22,35 @@
 snail = function (array) {
     const newArr = []
     while (array.length !== 0) {
-        newArr.push(array.shift())
+        //берем верхний массив:
+        newArr.push(...array.shift())
+        //берем правые значения:
         if (array.length !== 0) {
             const raith = []
             for (const el of array) {
                 raith.push(el.pop())
             }
-            newArr.push(raith)
+            newArr.push(...raith)
         }
+        //берем нижние значения:
         if (array.length !== 0) {
-            newArr.push(array.pop().reverse())
+            newArr.push(...array.pop().reverse())
         }
+        //берем левые значения:
         if (array.length !== 0) {
             const leght = []
             for (const el of array) {
                 leght.push(el.shift())
             }
-            newArr.push(leght.reverse())
+            newArr.push(...leght.reverse())
         }
-        //newArr.push()
+
     }
-    return newArr.flat()
+    return newArr
 }
 
-// console.log(snail([[]]))
-// console.log(snail([[1]]))
+console.log(snail([[]]))
+console.log(snail([[1]]))
 console.log(snail([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
 console.log(snail([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]]))
 console.log(snail([[1, 2, 3, 4, 5, 6], [20, 21, 22, 23, 24, 7], [19, 32, 33, 34, 25, 8], [18, 31, 36, 35, 26, 9], [17, 30, 29, 28, 27, 10], [16, 15, 14, 13, 12, 11]]))

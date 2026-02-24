@@ -8,7 +8,6 @@
 String.prototype.camelCase=function(){
     if(String(this))return this.split(' ').map(el=>el[0].toUpperCase()+el.slice(1,)).join('')
     return String(this)
-
 }
 
 

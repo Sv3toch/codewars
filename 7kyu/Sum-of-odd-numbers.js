@@ -13,11 +13,11 @@
 
 
 function rowSumOddNumbers(n) {
-    // const numStart = n*(n-1)+1
-    // const numEnd= numStart+2*(n-1)
-    // return (numStart+numEnd)*n/2
-    //
-    return n**3
+    const numStart = n*(n-1)+1
+    const numEnd= numStart+2*(n-1)
+    return (numStart+numEnd)*n/2
+
+    // return n**3
 }
 
 console.log(rowSumOddNumbers(2))

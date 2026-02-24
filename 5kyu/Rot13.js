@@ -20,6 +20,6 @@ function rot13(message){
 
 
 console.log(rot13('NNNNNnnn'))
-// console.log(rot13('Test'))
-// console.log(rot13('abcdefghijklmnopqrstuvwxyz'))
-// console.log(rot13('0FN]!-2'))
+console.log(rot13('Test'))
+console.log(rot13('abcdefghijklmnopqrstuvwxyz'))
+console.log(rot13('0FN]!-2'))

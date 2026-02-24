@@ -45,12 +45,8 @@
 
 
 function matrixDiagonal(matrix,value) {
-
-return matrix.reduce((acc,el,index)=>{
-    if(el[index-value]===undefined){
-        return acc+=0
-    }
-    return acc+=el[index-value]},0)
+return matrix.reduce((acc,el,index)=>//el=matrix[index]
+     acc+=~~el[index-value],0)
 }
 
 

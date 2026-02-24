@@ -8,12 +8,18 @@
 // "The_Stealth-Warrior" gets converted to "TheStealthWarrior"
 
 
+// function toCamelCase(str){
+//     str =str.split(/[-_]+/)
+// return `${str[0]}${str.slice(1).map(n=>n[0].toUpperCase()+n.slice(1)).join('')}`
+// }
+
+
+
 function toCamelCase(str){
-    str =str.split(/[-_]/)
-return `${str[0]}${str.slice(1).map(n=>n[0].toUpperCase()+n.slice(1)).join('')}`
+str= str.replaceAll('-','_')
+ return    str.split('_').map((el,index)=>index!==0?el.slice(0,1).toUpperCase()+el.slice(1,):el).join('')
 }
 
-
-console.log(toCamelCase("the-stealth-warrior"))
+console.log(toCamelCase("the--__-stealth-warrior"))
 console.log(toCamelCase("The_Stealth_Warrior"))
 console.log(toCamelCase("The_Stealth-Warrior"))
